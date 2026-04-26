@@ -1,15 +1,17 @@
-## Indian_Sign_Language_Recognition_System
+# American Sign Language (ASL) Recognition App
 
-A real-time hand gesture recognition system that translates Indian Sign Language (ISL) alphabet into text using Computer Vision and Deep Learning. The application leverages a CNN-based classification model and runs via a Streamlit interface for interactive usage.
+A real-time American Sign Language (ASL) alphabet recognition system powered by Transfer Learning (MobileNetV2) and Computer Vision.
+The application detects hand gestures from a live camera feed and predicts the corresponding alphabet (A–Z) with high accuracy.
 
 ## 📌 Overview
 
-This project captures live video input, detects hand gestures, preprocesses the region of interest, and predicts the corresponding ISL alphabet using a trained deep learning model.
+This project captures live video input, detects hand gestures, preprocesses the region of interest, and predicts the corresponding ASL alphabet using a trained deep learning model.
 
-📷 Real-time hand tracking
-🤖 CNN-based gesture classification
+📷 Real-time hand tracking 
 
-🧠 Deep learning inference using TensorFlow/Keras
+🤖 Transfer Learning with MobileNetV2
+
+🧠 Fast and efficient inference using TensorFlow/Keras
 
 🎯 Single-hand detection and classification
 
@@ -33,9 +35,39 @@ Frontend/UI: Streamlit
 
 Computer Vision: OpenCV, CVZone
 
+Model: MobileNetV2
+
 Deep Learning: TensorFlow / Keras
 
 Language: Python
+
+## 🧠 Model Architecture
+
+The model is built using transfer learning with MobileNetV2, pre-trained on ImageNet.
+
+### 🔹 Fine-Tuning Strategy
+
+  The top 60 layers are unfrozen
+
+   Lower layers remain frozen
+
+👉 This allows:
+
+  General features (edges, textures) → preserved
+
+  Task-specific features → learned
+
+
+## 📊 Dataset Details
+
+Total images: 1750
+
+Training: 1400
+
+Validation: 350
+
+Classes: 35 gestures
+
 
 ## APP : 
 
@@ -45,7 +77,8 @@ Language: Python
 
 <img width="937" height="730" alt="Screenshot 2026-04-26 212808" src="https://github.com/user-attachments/assets/ef3ac363-1bde-4cc6-a7e9-4adffc8506de" />
 
-<img width="878" height="755" alt="Screenshot 2026-04-26 212711" src="https://github.com/user-attachments/assets/a17da6bd-e008-4301-9a96-4ef32047e6f0" />
+<img width="903" height="717" alt="Screenshot 2026-04-26 215653" src="https://github.com/user-attachments/assets/0c297d6d-e8ba-4770-9c7a-3f30603e6287" />
+
 
 
 
